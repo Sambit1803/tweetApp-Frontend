@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Likes, Tweets, TweetsDataService } from '../service/data/tweets-data.service';
-import { HelloWorld, WelcomeDataService } from '../service/data/welcome-data.service';
-
-export class Arr {
-  constructor(public id: number, public likes: number) { }
-}
 
 @Component({
   selector: 'app-home',
@@ -33,9 +28,6 @@ export class HomeComponent implements OnInit {
 
 
   tags = ''
-
-
-
 
 
   constructor(private route: ActivatedRoute, private service: TweetsDataService, private router: Router) { }

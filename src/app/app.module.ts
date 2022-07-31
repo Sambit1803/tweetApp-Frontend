@@ -10,7 +10,6 @@ import { ErrorComponent } from './error/error.component';
 import { TweetsComponent } from './tweets/tweets.component';
 import { UsersComponent } from './users/users.component';
 import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
 import { LogoutComponent } from './logout/logout.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
@@ -28,7 +27,6 @@ import { CommentsComponent } from './comments/comments.component';
     TweetsComponent,
     UsersComponent,
     HeaderComponent,
-    FooterComponent,
     LogoutComponent,
     RegisterComponent,
     UserTweetsComponent,

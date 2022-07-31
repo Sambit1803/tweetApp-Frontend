@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Arr } from '../home/home.component';
 import { Likes, Tweets, TweetsDataService } from '../service/data/tweets-data.service';
 import { UserDataService, Users } from '../service/data/users/user-data.service';
 

@@ -24,28 +24,17 @@ export class LoginComponent implements OnInit {
   handleLogin() {
 
     this.service.authenticateUser(this.loginId, this.password).subscribe(response => {
-      console.log("response: "+response)
       if (response === true) {
-        console.log("inside if")
         sessionStorage.setItem('authenticatedUser', this.loginId)
         this.router.navigate(['tweets', this.loginId,'home'])
         this.invalidLogin = false
       }
       else {
-        console.log("inside else")
         this.invalidLogin = true
       }
 
     })
 
-    // if (this.hardcodedAutheneticationService.authenticate(this.loginId,this.password)) {
-
-    //   this.router.navigate(['tweets', this.loginId,'home'])
-    //   this.invalidLogin = false
-    // }
-    // else {
-    //   this.invalidLogin = true;
-    // }
   }
 
 }
