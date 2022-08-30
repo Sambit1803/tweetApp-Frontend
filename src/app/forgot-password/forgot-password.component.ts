@@ -14,6 +14,8 @@ export class ForgotPasswordComponent implements OnInit {
   newPassword = ''
   c_newPassword = ''
 
+  errorBool=false;
+
   constructor(private service: UserDataService, private router: Router) { }
 
   ngOnInit(): void {
@@ -21,6 +23,10 @@ export class ForgotPasswordComponent implements OnInit {
 
   updatePassword() {
     this.service.getUser(this.loginId).subscribe(response => {
+      if(response==null){
+        this.errorBool=true
+        return
+      }
       response.password = this.newPassword
       this.service.updatePassword(this.loginId, response).subscribe(data => this.router.navigate(['tweets/login']))
     })
