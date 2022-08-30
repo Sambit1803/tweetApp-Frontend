@@ -13,7 +13,6 @@ export class UserDataService {
   constructor(private http: HttpClient) { }
 
   register(user: Users) {
-    console.log(user)
     return this.http.post("http://localhost:8080/tweets/register", user)
   }
 
